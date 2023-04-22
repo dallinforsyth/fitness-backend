@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  img: MyString
+  muscle: MyString
+  body_group: 1
+
+two:
+  img: MyString
+  muscle: MyString
+  body_group: 1
