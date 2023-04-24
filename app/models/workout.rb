@@ -1,3 +1,3 @@
 class Workout < ApplicationRecord
-  belongsto: body_grouop
+  # belongs_to :body_grouop
 end
