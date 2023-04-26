@@ -10,10 +10,20 @@ class WorkoutsController < ApplicationController
   end
 
   def create
-    @photo = Workout.create(
+    @workout = Workout.create(
       img: params[:img],
       body_group: params[:body_group],
       muscle: params[:muscle],
+    )
+    render :show
+  end
+
+  def update
+    @workout = Workout.find_by(id: params[:id])
+    @workout.update(
+      img: params[:img] || @workout.img,
+      body_group: params[:body_group] || @workout.body_group,
+      muscle: params[:muscle] || @workout.muscle,
     )
     render :show
   end
