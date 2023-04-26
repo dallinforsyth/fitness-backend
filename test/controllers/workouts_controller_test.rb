@@ -25,14 +25,14 @@ class WorkoutsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "update" do
-    photo = Photo.first
-    patch "/photos/#{photo.id}.json", params: { img: "Updated img" }
+    workout = Workout.first
+    patch "/workouts/#{workout.id}.json", params: { img: "Updated img" }
     assert_response 200
 
     data = JSON.parse(response.body)
     assert_equal "Updated img", data["img"]
-    assert_equal photo.body_group, data["body_group"]
-    assert_equal photo.muscle, data["muscle"]
+    assert_equal workout.body_group, data["body_group"]
+    assert_equal workout.muscle, data["muscle"]
   end
 
   test "destroy" do
