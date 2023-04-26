@@ -27,4 +27,10 @@ class WorkoutsController < ApplicationController
     )
     render :show
   end
+
+  def destroy
+    @workout = Workout.find_by(id: params[:id])
+    @workout.destroy
+    render json: { message: "workout destroyed successfully" }
+  end
 end
