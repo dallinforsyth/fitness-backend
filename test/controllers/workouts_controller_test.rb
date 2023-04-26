@@ -21,7 +21,7 @@ class WorkoutsControllerTest < ActionDispatch::IntegrationTest
     assert_response 200
 
     data = JSON.parse(response.body)
-    assert_equal ["id", "img", "body_group", "muscle", "created_at", "updated_at"], data.keys
+    assert_equal ["id", "img", "body_group", "muscle"], data.keys
   end
 
   test "update" do
