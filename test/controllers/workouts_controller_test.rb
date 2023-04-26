@@ -34,4 +34,11 @@ class WorkoutsControllerTest < ActionDispatch::IntegrationTest
     assert_equal photo.width, data["width"]
     assert_equal photo.height, data["height"]
   end
+
+  test "destroy" do
+    assert_difference "Photo.count", -1 do
+      delete "/photos/#{Photo.first.id}.json"
+      assert_response 200
+    end
+  end
 end
