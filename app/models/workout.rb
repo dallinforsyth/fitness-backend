@@ -1,3 +1,3 @@
 class Workout < ApplicationRecord
-  # belongs_to :body_grouop
+  has_many :body_groups
 end
