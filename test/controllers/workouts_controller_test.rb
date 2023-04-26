@@ -23,4 +23,15 @@ class WorkoutsControllerTest < ActionDispatch::IntegrationTest
     data = JSON.parse(response.body)
     assert_equal ["id", "name", "width", "height", "created_at", "updated_at"], data.keys
   end
+
+  test "update" do
+    photo = Photo.first
+    patch "/photos/#{photo.id}.json", params: { name: "Updated name" }
+    assert_response 200
+
+    data = JSON.parse(response.body)
+    assert_equal "Updated name", data["name"]
+    assert_equal photo.width, data["width"]
+    assert_equal photo.height, data["height"]
+  end
 end
