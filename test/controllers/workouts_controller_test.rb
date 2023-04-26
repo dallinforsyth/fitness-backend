@@ -36,8 +36,8 @@ class WorkoutsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "destroy" do
-    assert_difference "Photo.count", -1 do
-      delete "/photos/#{Photo.first.id}.json"
+    assert_difference "Workout.count", -1 do
+      delete "/workouts/#{Workout.first.id}.json"
       assert_response 200
     end
   end
