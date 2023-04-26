@@ -6,7 +6,7 @@ class WorkoutsControllerTest < ActionDispatch::IntegrationTest
     assert_response 200
 
     data = JSON.parse(response.body)
-    assert_equal Photo.count, data.length
+    assert_equal Workout.count, data.length
   end
 
   test "create" do
