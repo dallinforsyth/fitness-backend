@@ -3,7 +3,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  get "/workouts/:id" => "workouts#show"
-  get "/workouts" => "workouts#index"
-  resources :workouts
+  resources :workouts, defaults: { format: "json" }
 end

@@ -1,3 +1,5 @@
 class Workout < ApplicationRecord
-  has_many :body_groups
+  belongs_to :body_group
+  has_many :workout_muscles
+  has_many :muscles, through: :workout_muscles
 end
