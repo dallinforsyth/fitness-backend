@@ -5,4 +5,6 @@ chest = BodyGroup.create!(body_part: "Chest")
 shoulder = BodyGroup.create!(body_part: "Shoulder")
 back = BodyGroup.create!(body_part: "Back")
 
-Workout.create!(img: "https://www.mensjournal.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_620/MTk2MTM3MzIxNzgzMDQzNTg5/2-dip.webp", muscle: "triceps", body_group: arm.id)
+Workout.create!(img: "https://www.mensjournal.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_620/MTk2MTM3MzIxNzgzMDQzNTg5/2-dip.webp")
+
+Muscle.create!(name: "tricept", body_group_id: arm.id)
