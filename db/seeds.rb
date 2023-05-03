@@ -5,7 +5,7 @@ chest = BodyGroup.create!(body_part: "Chest")
 shoulder = BodyGroup.create!(body_part: "Shoulder")
 back = BodyGroup.create!(body_part: "Back")
 
-skullcrusher = Workout.create!(img: "https://www.mensjournal.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_620/MTk2MTM3MzIxNzgzMDQzNTg5/2-dip.webp")
+skullcrusher = Workout.create!(img: "https://www.mensjournal.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_620/MTk2MTM3MzIxNzgzMDQzNTg5/2-dip.webp", name: "tricep dips")
 
 muscle1 = Muscle.create!(name: "abdominals", body_group_id: core.id)
 muscle2 = Muscle.create!(name: "abductors", body_group_id: leg.id)
