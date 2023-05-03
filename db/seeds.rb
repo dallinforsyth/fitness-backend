@@ -24,4 +24,4 @@ muscle14 = Muscle.create!(name: "quadriceps", body_group_id: leg.id)
 muscle15 = Muscle.create!(name: "traps", body_group_id: back.id)
 muscle16 = Muscle.create!(name: "triceps", body_group_id: arm.id)
 
-WorkoutMuscles.create!(workout_id: skullcrusher.id, muscle_id: muscle16.id)
+WorkoutMuscle.create!(workout_id: skullcrusher.id, muscle_id: muscle16.id)
