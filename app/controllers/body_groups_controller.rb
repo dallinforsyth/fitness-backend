@@ -1,0 +1,2 @@
+class BodyGroupsController < ApplicationController
+end
