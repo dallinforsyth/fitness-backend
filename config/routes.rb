@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :workouts, defaults: { format: "json" }
   resources :workout_muscles, defaults: { format: "json" }
+  resources :body_groups, defaults: { format: "json" }
 end
