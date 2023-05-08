@@ -5,7 +5,9 @@ chest = BodyGroup.create!(body_part: "Chest")
 shoulder = BodyGroup.create!(body_part: "Shoulder")
 back = BodyGroup.create!(body_part: "Back")
 
-skullcrusher = Workout.create!(img: "https://www.mensjournal.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_620/MTk2MTM3MzIxNzgzMDQzNTg5/2-dip.webp", name: "tricep dips")
+tricep_dips = Workout.create!(img: "https://www.mensjournal.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_620/MTk2MTM3MzIxNzgzMDQzNTg5/2-dip.webp", name: "tricep dips")
+squat = Workout.create!(img: "https://i.pinimg.com/564x/f2/db/1f/f2db1f89cfc62c18643528a803295488.jpg", name: "Weighted Squats")
+bench = Workout.create!(img: "https://i.pinimg.com/originals/a6/4d/df/a64ddf7b1d4775a7ca05302c0c31c881.gif", name: "Bench Press")
 
 muscle1 = Muscle.create!(name: "abdominals", body_group_id: core.id)
 muscle2 = Muscle.create!(name: "abductors", body_group_id: leg.id)
@@ -24,4 +26,4 @@ muscle14 = Muscle.create!(name: "quadriceps", body_group_id: leg.id)
 muscle15 = Muscle.create!(name: "traps", body_group_id: back.id)
 muscle16 = Muscle.create!(name: "triceps", body_group_id: arm.id)
 
-WorkoutMuscle.create!(workout_id: skullcrusher.id, muscle_id: muscle16.id)
+WorkoutMuscle.create!(workout_id: tricep_dips.id, muscle_id: muscle16.id)
