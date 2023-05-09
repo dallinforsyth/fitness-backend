@@ -10,8 +10,8 @@ squat = Workout.create!(img: "https://i.pinimg.com/564x/f2/db/1f/f2db1f89cfc62c1
 bench = Workout.create!(img: "https://i.pinimg.com/originals/a6/4d/df/a64ddf7b1d4775a7ca05302c0c31c881.gif", name: "Bench Press")
 bulgarian_split_squat = Workout.create!(img: "https://hips.hearstapps.com/hmg-prod/images/split-squat-1541799833.jpg", name: "Bulgarian split squat")
 leg_press = Workout.create!(img: "https://www.panattasport.com/resources/products/1sc085//01.jpg", name: "Leg press")
-Workout.create!(img: "https://i.pinimg.com/originals/a6/4d/df/a64ddf7b1d4775a7ca05302c0c31c881.gif", name: "Bench Press")
-Workout.create!(img: "https://i.pinimg.com/originals/a6/4d/df/a64ddf7b1d4775a7ca05302c0c31c881.gif", name: "Bench Press")
+leg_curl = Workout.create!(img: "https://weighttraining.guide/wp-content/uploads/2016/10/lying-leg-curl-resized.png?ezimgfmt=ng%3Awebp%2Fngcb4", name: "Leg Curl")
+calf_raises = Workout.create!(img: "https://hips.hearstapps.com/hmg-prod/images/angela-calf-exercises-main-1557866836.jpg?crop=0.625xw:1.00xh;0.211xw,0&resize=1200:*", name: "Calf raises")
 
 muscle1 = Muscle.create!(name: "abdominals", body_group_id: core.id)
 muscle2 = Muscle.create!(name: "abductors", body_group_id: leg.id)
