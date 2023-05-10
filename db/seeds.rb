@@ -31,3 +31,8 @@ muscle15 = Muscle.create!(name: "traps", body_group_id: back.id)
 muscle16 = Muscle.create!(name: "triceps", body_group_id: arm.id)
 
 WorkoutMuscle.create!(workout_id: tricep_dips.id, muscle_id: muscle16.id)
+WorkoutMuscle.create!(workout_id: squat.id, muscle_id: muscle14.id)
+WorkoutMuscle.create!(workout_id: bulgarian_split_squat.id, muscle_id: muscle8.id)
+WorkoutMuscle.create!(workout_id: leg_press.id, muscle_id: muscle14.id)
+WorkoutMuscle.create!(workout_id: leg_curl.id, muscle_id: muscle9.id)
+WorkoutMuscle.create!(workout_id: calf_raises.id, muscle_id: muscle5.id)
