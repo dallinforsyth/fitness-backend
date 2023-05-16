@@ -1,10 +1,10 @@
 class WorkoutsController < ApplicationController
   def index
     # if params[:body_group_id].present?
-    @workouts = Workout.includes(:body_groups).where(body_groups: { id: params[:body_group_id] })
+    @workouts = Workout.includes(:body_groups).where(body_groups: { id: 6 })
     # else
     #   @workouts = Workout.all
-    # end
+    end
     render :index
   end
 
