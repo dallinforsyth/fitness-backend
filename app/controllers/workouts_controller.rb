@@ -3,7 +3,7 @@ class WorkoutsController < ApplicationController
     # if params[:body_group_id].present?
     @workouts = Workout.includes(:body_groups).where(body_groups: { id: 6 })
     # else
-    #   @workouts = Workout.all
+      @workouts = Workout.all
     end
     render :index
   end
