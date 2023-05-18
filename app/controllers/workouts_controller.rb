@@ -1,9 +1,13 @@
 class WorkoutsController < ApplicationController
   def index
-    # if params[:body_group_id].present?
-    @workouts = Workout.includes(:body_groups).where(body_groups: { id: 6 })
-    # else
+    puts params
+    if params[:body_group_id].present?
+      puts "*" * 50
+      puts params[:body_group_id]
+      @workouts = Workout.includes(:body_groups).where(body_groups: { id: params[:body_group_id] })
+    else
       @workouts = Workout.all
+      puts "!" * 50
     end
     render :index
   end
@@ -36,5 +40,13 @@ class WorkoutsController < ApplicationController
     @workout = Workout.find_by(id: params[:id])
     @workout.destroy
     render json: { message: "workout destroyed successfully" }
+  end
+
+  private
+
+  def workout_params
+    params.permit(
+      :body_group_id
+    )
   end
 end
