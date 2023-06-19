@@ -75,3 +75,5 @@ WorkoutMuscle.create!(workout_id: pullups.id, muscle_id: muscle10.id)
 WorkoutMuscle.create!(workout_id: bar_rows.id, muscle_id: muscle12.id)
 WorkoutMuscle.create!(workout_id: deadlifts.id, muscle_id: muscle11.id)
 WorkoutMuscle.create!(workout_id: shoulder_shrugs.id, muscle_id: muscle13.id)
+
+User.create!(name: "Dallin", email:"test@test.com")
