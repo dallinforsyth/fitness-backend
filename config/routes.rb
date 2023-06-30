@@ -9,4 +9,8 @@ Rails.application.routes.draw do
   resources :muscles, defaults: { format: "json" }
   post "/users" => "users#create"
   post "/sessions" => "sessions#create"
+
+  resources :users do
+    resources :workouts
+  end
 end

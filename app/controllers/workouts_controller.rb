@@ -2,12 +2,14 @@ class WorkoutsController < ApplicationController
   def index
     puts params
     if params[:body_group_id].present?
-      puts "*" * 50
+      # puts "*" * 50
       puts params[:body_group_id]
       @workouts = Workout.includes(:body_groups).where(body_groups: { id: params[:body_group_id] })
+    elsif params[:user_id].present?
+      @workouts = User.find(params[:user_id]).workouts
     else
       @workouts = Workout.all
-      puts "!" * 50
+      # puts "!" * 50
     end
     render :index
   end
