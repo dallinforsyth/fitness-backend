@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   skip_forgery_protection
 
+  def show
+    @user = User.find(params[:id])
+  end
+
   def create
     user = User.new(
       name: params[:name],
