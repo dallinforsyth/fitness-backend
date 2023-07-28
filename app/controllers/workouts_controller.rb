@@ -20,10 +20,12 @@ class WorkoutsController < ApplicationController
   end
 
   def create
-    @workout = Workout.create(
+    @workout = Workout.create!(
+      user: current_user,
+      name: params[:name],
       img: params[:img],
-      body_group: params[:body_group],
-      muscle: params[:muscle],
+      body_group_id: params[:body_group_id],
+      muscle_id: params[:muscle_id],
     )
     render :show
   end
